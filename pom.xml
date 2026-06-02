@@ -80,10 +80,9 @@
             <artifactId>popper.js</artifactId>
             <version>2.11.7</version>
         </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>webjars-locator</artifactId>
-            <version>0.52</version>
+        <dependency>             
+            <groupId>org.webjars</groupId>             
+            <artifactId>webjars-locator-lite</artifactId>         
         </dependency>
         <dependency>
             <groupId>com.mysql</groupId>
@@ -97,6 +96,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-admin</artifactId>
+            <version>9.5.0</version>
         </dependency>         
     </dependencies>
 
