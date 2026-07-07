@@ -22,4 +22,8 @@ public interface ProductoRepository extends JpaRepository<Producto, Integer> {
             value = "SELECT * FROM producto p WHERE p.precio BETWEEN :precioInf AND :precioSup ORDER BY p.precio ASC")
     public List<Producto> consultaSQL(@Param("precioInf") double precioInf, @Param("precioSup") double precioSup);
     
+    //Consulta SQL que recupera los producto de un rango de precio y los ordena por precio ascendentemente
+    @Query(nativeQuery = true,
+            value = "SELECT * FROM producto p WHERE p.existencias <= :existencias AND p.existencias > 0 ORDER BY p.existencias DESC;")
+    public List<Producto> consultaSQLExistencias(@Param("existencias") double existencias); 
 }
